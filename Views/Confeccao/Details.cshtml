@@ -1,0 +1,31 @@
+﻿@model Loja.Models.Confeccao
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Confeccao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoProduto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tipoProduto.tipoProdutoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.confeccaoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
